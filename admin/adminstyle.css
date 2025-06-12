@@ -1,0 +1,50 @@
+/* Full height layout */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: silver;
+}
+
+/* Sidebar fixed to the left */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Sidebar link styles */
+.sidebar .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #495057;
+    border-radius: 4px;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 220px; /* Same as sidebar width */
+    padding: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
